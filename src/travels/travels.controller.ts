@@ -28,19 +28,29 @@ export class TravelsController {
 
   @Post()
   addTravel(@Body() travel: CreateTravelDto) {
-    // this.travels.push(travel);
-    return travel;
+    // TODO: Implement logic to add a new travel
+    return {
+      message: 'Travel created successfully: ',
+      travel: travel
+    };
   }
 
   @Put(':id')
   editTravel(@Param('id') id: string, @Body() updatedTravel: UpdateTravelDto) {
-    // Implement logic to edit a travel by ID
-    return updatedTravel;
+    // TODO: Implement logic to edit a travel by ID
+    return {
+      message: 'Travel updated successfully: ',
+      travelId: id,
+      travel: updatedTravel
+    };
   }
 
   @Delete(':id')
   deleteTravel(@Param('id') id: string) {
-    // Implement logic to delete a travel by ID
-    return { message: 'Travel deleted successfully: ' + id };
+    // TODO: Implement logic to delete a travel by ID
+    return {
+      message: 'Travel deleted successfully: ',
+      travelId: id
+    };
   }
 }
