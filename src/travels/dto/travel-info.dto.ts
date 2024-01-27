@@ -11,11 +11,11 @@ export class TravelInfoDto {
 
   @IsNotEmpty()
   @IsDate()
-  departureDate: Date;
+  departureDate: string;
 
   @IsNotEmpty()
   @IsDate()
-  returnDate: Date;
+  returnDate: string;
 
   @IsNotEmpty()
   @IsString()

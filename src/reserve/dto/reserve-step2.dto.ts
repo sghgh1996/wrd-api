@@ -7,10 +7,6 @@ export class ReserveStep2Dto {
 
   @IsNotEmpty()
   @IsString()
-  travelId: string;
-
-  @IsNotEmpty()
-  @IsString()
   name: string;
 
   @IsNotEmpty()
