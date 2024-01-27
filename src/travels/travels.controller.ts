@@ -12,7 +12,11 @@ export class TravelsController {
 
   @Get()
   getTravels() {
-    return this.travels;
+    return {
+      message: 'Travels found successfully: ',
+      status: 'ok',
+      travels: this.travels
+    };
   }
 
   @Get(':id')
@@ -20,10 +24,18 @@ export class TravelsController {
     const travel = this.travels.find(t => t.id === id);
 
     if (!travel) {
-      return { message: 'Travel not found' };
+      return {
+        message: 'Travel not found',
+        status: 'error',
+        travel: null
+      };
     }
 
-    return travel;
+    return {
+      message: 'Travel found successfully: ',
+      status: 'ok',
+      travel
+    };
   }
 
   @Post()
@@ -31,6 +43,7 @@ export class TravelsController {
     // TODO: Implement logic to add a new travel
     return {
       message: 'Travel created successfully: ',
+      status: 'ok',
       travel: travel
     };
   }
@@ -40,6 +53,7 @@ export class TravelsController {
     // TODO: Implement logic to edit a travel by ID
     return {
       message: 'Travel updated successfully: ',
+      status: 'ok',
       travelId: id,
       travel: updatedTravel
     };
@@ -50,6 +64,7 @@ export class TravelsController {
     // TODO: Implement logic to delete a travel by ID
     return {
       message: 'Travel deleted successfully: ',
+      status: 'ok',
       travelId: id
     };
   }
