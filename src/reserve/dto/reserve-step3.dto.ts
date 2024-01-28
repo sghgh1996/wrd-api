@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional } from 'class-validator';
 
 export class ReserveStep3Dto {
   @IsNotEmpty()
@@ -9,7 +9,7 @@ export class ReserveStep3Dto {
   @IsString()
   paymentType: string;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsString()
   notes: string;
 }

@@ -1,4 +1,4 @@
-import { IsString, IsDate, IsNumber, IsNotEmpty } from 'class-validator';
+import { IsString, IsNumber, IsNotEmpty } from 'class-validator';
 
 export class TravelInfoDto {
   @IsNotEmpty()
@@ -10,11 +10,11 @@ export class TravelInfoDto {
   name: string;
 
   @IsNotEmpty()
-  @IsDate()
+  @IsString()
   departureDate: string;
 
   @IsNotEmpty()
-  @IsDate()
+  @IsString()
   returnDate: string;
 
   @IsNotEmpty()

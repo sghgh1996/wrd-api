@@ -1,4 +1,4 @@
-import { IsString, IsDate, IsNumber, IsNotEmpty, IsOptional } from 'class-validator';
+import { IsString, IsNumber, IsNotEmpty, IsOptional } from 'class-validator';
 
 export class CreateTravelDto {
   @IsNotEmpty()
@@ -6,12 +6,12 @@ export class CreateTravelDto {
   name: string;
 
   @IsNotEmpty()
-  @IsDate()
-  departureDate: Date;
+  @IsString()
+  departureDate: string;
 
   @IsNotEmpty()
-  @IsDate()
-  returnDate: Date;
+  @IsString()
+  returnDate: string;
 
   @IsOptional()
   @IsString()
