@@ -156,7 +156,7 @@ export const mockTravels: TravelInfoDto[] = [
     name: 'Tour in Oslo',
     departureDate: '2024-03-08',
     returnDate: '2024-03-11',
-    imageUrl: 'https://picsum.photos/id/245/450/200',
+    imageUrl: 'https://picsum.photos/id/225/450/200',
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
     price: 1100,
     averageRating: 3.7,
